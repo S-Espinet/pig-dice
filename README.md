@@ -45,6 +45,11 @@ Test3: "It should return 0 when currentRoll = 1."
 Code: rollDice(1);
 Expected Output: 0
 
+Test4: "It should switch players if a 1 is rolled"
+Code: (current player = 0 (Player One)) 
+      rollDice(1)
+Expected Output: current player = 1 (Player Two)
+
 Describe: addRunningTotal()
 
 Test1:"It should add currentRoll to runningTotal
@@ -56,3 +61,4 @@ Describe: addTotalScore()
 Test1; "It should add runningTotal to totalScore."
 Code: addTotalScore(6, 3);
 Expected Output: 9
+
