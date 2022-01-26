@@ -1,6 +1,7 @@
 function Player () {
   this.currentRoll = 0;
-  this.runningTotal = 0
+  this.runningTotal = 0;
+  this.totalScore = 0;
 }
 
 Player.prototype.rollDice = function() {
@@ -8,6 +9,12 @@ Player.prototype.rollDice = function() {
   return this.currentRoll;
 };
 
-Player.prototype.add = function() {
+Player.prototype.addRunningTotal = function() {
   this.runningTotal += this.currentRoll;
-}
+  return this.runningTotal;
+};
+
+Player.prototype.addTotalScore = function() {
+  this.totalScore += this.runningTotal;
+  return this.totalScore;
+};

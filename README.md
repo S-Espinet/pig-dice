@@ -41,8 +41,14 @@ Test2: "It should return a number between 1 and 6 when stored inside an object."
 Code: roll(6);
 Expected Output: 1, 2, 3, 4, 5, or 6.
 
-Describe: add()
+Describe: addRunningTotal()
 
 Test3:"It should add currentRoll to runningTotal
-Code: add(6, 3);
+Code: addRunningTotal(6, 3);
+Expected Output: 9
+
+Describe: addTotalScore()
+
+Test4; "It should add runningTotal to totalScore."
+Code: addTotalScore(6, 3);
 Expected Output: 9
