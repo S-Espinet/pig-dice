@@ -7,7 +7,6 @@ function Player () {
 let currentPlayer = "playerOne";
 
 function switchPlayer(currentPlayer) {
-  
   if (currentPlayer === "playerOne") {
     currentPlayer = "playerTwo";
     return currentPlayer;
