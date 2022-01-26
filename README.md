@@ -31,9 +31,12 @@ When you have a broad overview of how you want to build your game, identify the 
 
 -----------------------------------------------------------------------------------------------------------------
 
-Describe: Roll()
+Describe: roll()
 
-Test1: "It should display a random number between 1 and 6."
-Code: roll(6) + 1
-Expected Output: 1, 2, 3, 4, 6, or 6.
+Test1: "It should return a random number between 1 and 6."
+Code: roll(6);
+Expected Output: 1, 2, 3, 4, 5, or 6.
 
+Test2: "It should return a number between 1 and 6 when stored inside an object."
+Code: roll(6);
+Expected Output: 1, 2, 3, 4, 5, or 6.
