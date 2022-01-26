@@ -40,3 +40,9 @@ Expected Output: 1, 2, 3, 4, 5, or 6.
 Test2: "It should return a number between 1 and 6 when stored inside an object."
 Code: roll(6);
 Expected Output: 1, 2, 3, 4, 5, or 6.
+
+Describe: add()
+
+Test3:"It should add currentRoll to runningTotal
+Code: add(6, 3);
+Expected Output: 9
