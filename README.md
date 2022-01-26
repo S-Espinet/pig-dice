@@ -31,24 +31,28 @@ When you have a broad overview of how you want to build your game, identify the 
 
 -----------------------------------------------------------------------------------------------------------------
 
-Describe: roll()
+Describe: rollDice()
 
 Test1: "It should return a random number between 1 and 6."
-Code: roll(6);
+Code: rollDice(6);
 Expected Output: 1, 2, 3, 4, 5, or 6.
 
 Test2: "It should return a number between 1 and 6 when stored inside an object."
-Code: roll(6);
+Code: rollDice(6);
 Expected Output: 1, 2, 3, 4, 5, or 6.
+
+Test3: "It should return 0 when currentRoll = 1."
+Code: rollDice(1);
+Expected Output: 0
 
 Describe: addRunningTotal()
 
-Test3:"It should add currentRoll to runningTotal
+Test1:"It should add currentRoll to runningTotal
 Code: addRunningTotal(6, 3);
 Expected Output: 9
 
 Describe: addTotalScore()
 
-Test4; "It should add runningTotal to totalScore."
+Test1; "It should add runningTotal to totalScore."
 Code: addTotalScore(6, 3);
 Expected Output: 9

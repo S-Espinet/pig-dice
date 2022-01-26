@@ -6,7 +6,14 @@ function Player () {
 
 Player.prototype.rollDice = function() {
   this.currentRoll = Math.floor(Math.random() * 6 + 1);
-  return this.currentRoll;
+  console.log("The current roll:", this.currentRoll);
+  if (this.currentRoll === 1) {
+      console.lot("You rolled a 1!")
+      this.runningTotal = 0;
+  }
+  else {
+    return this.currentRoll;
+  };
 };
 
 Player.prototype.addRunningTotal = function() {
