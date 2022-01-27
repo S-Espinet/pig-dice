@@ -58,6 +58,7 @@ $(document).ready (function() {
     if (currentPlayer === "playerOne") {
     console.log("Player One's Turn!");
     playerOne.rollDice();
+    $("#player-turn2").hide();
     $("#running-score1").html(playerOne.runningTotal);
     $("#running-score1").show(playerOne.runningTotal);
     
@@ -65,6 +66,7 @@ $(document).ready (function() {
     else {
     console.log("Player Two's Turn!");
     playerTwo.rollDice();
+    $("#player-turn1").hide();
     $("#running-score2").html(playerTwo.runningTotal);
     $("#running-score2").show(playerTwo.runningTotal);
     }
@@ -72,6 +74,7 @@ $(document).ready (function() {
   $("button#hold").click (function() {
     if (currentPlayer === "playerOne") {
       playerOne.addTotalScore();
+      $("#player-turn1").show();
       console.log("Turn over, player 1. Your score is:", playerOne.totalScore);
       console.log("now it is player 2's turn.")
       $("#total-score1").html(playerOne.totalScore);
@@ -79,6 +82,7 @@ $(document).ready (function() {
     }
     else {
       playerTwo.addTotalScore();
+      $("#player-turn2").show();
       console.log("Turn over, player 2. Your score is:", playerTwo.totalScore);
       console.log("now it is player 1's turn.")
       $("#total-score2").html(playerTwo.totalScore);
