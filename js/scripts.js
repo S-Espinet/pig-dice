@@ -25,7 +25,11 @@ Player.prototype.addRunningTotal = function() {
 
 Player.prototype.addTotalScore = function() {
   this.totalScore += this.runningTotal;
+  this.runningTotal = 0;
+  console.log("running total", this.runningTotal);
+  currentPlayer = switchPlayer(currentPlayer);
   return this.totalScore;
+  return this.runningTotal;
 };
 
 Player.prototype.rollDice = function() {
@@ -48,16 +52,37 @@ Player.prototype.rollDice = function() {
 
 
 $(document).ready (function() {
-  console.log("document loading");
   let playerOne = new Player("player 1");
   let playerTwo = new Player("player 2");
-  switchPlayer();
   $("button#roll").click (function() {
     if (currentPlayer === "playerOne") {
+    console.log("Player One's Turn!");
     playerOne.rollDice();
+    $("#running-score1").html(playerOne.runningTotal);
+    $("#running-score1").show(playerOne.runningTotal);
+    
     } 
     else {
+    console.log("Player Two's Turn!");
     playerTwo.rollDice();
+    $("#running-score2").html(playerTwo.runningTotal);
+    $("#running-score2").show(playerTwo.runningTotal);
     }
   });
+  $("button#hold").click (function() {
+    if (currentPlayer === "playerOne") {
+      playerOne.addTotalScore();
+      console.log("Turn over, player 1. Your score is:", playerOne.totalScore);
+      console.log("now it is player 2's turn.")
+      $("#total-score1").html(playerOne.totalScore);
+      $("#running-score1").hide(playerOne.runningTotal);
+    }
+    else {
+      playerTwo.addTotalScore();
+      console.log("Turn over, player 2. Your score is:", playerTwo.totalScore);
+      console.log("now it is player 1's turn.")
+      $("#total-score2").html(playerTwo.totalScore);
+      $("#running-score2").hide(playerTwo.runningTotal);
+    }
+  })
 });

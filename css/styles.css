@@ -9,3 +9,7 @@
 img {
   width:15%;
 }
+
+#player-turn1, #player-turn2 {
+  display: none;
+}
