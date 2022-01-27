@@ -70,3 +70,6 @@ Test1: "It should reset values to 0 for a new game"
 Code: 
 Expected Output: 
 
+
+playerOne.totalScore = 0;
+
