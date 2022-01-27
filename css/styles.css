@@ -9,7 +9,18 @@
 img {
   width:15%;
 }
+/* #die-img {
+  display: none;
+} */
+#dice1, #dice2, #dice3, #dice4, #dice5, #dice6, #dice7, #dice8, #dice9, #dice10, #dice11, #dice12{
+  display:none;
+}
 
 #player-turn1, #player-turn2 {
   display: none;
+}
+#player1-win,  #player2-win {
+  display: none;
+  color: hotpink;
+  background-color: yellow;
 }
