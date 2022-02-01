@@ -33,18 +33,18 @@ Player.prototype.addTotalScore = function() {
 };
 
 Player.prototype.rollDice = function() {
-  this.currentRoll = Math.floor(Math.random() * 6 + 1);
-  console.log("The current roll:", this.currentRoll);
-  if (this.currentRoll === 1) {
-    console.log("You rolled a 1!")
-    this.runningTotal = 0;
-    console.log("Running total is", this.runningTotal)
-    currentPlayer = switchPlayer(currentPlayer);
-    console.log("The current player is: ", currentPlayer);
-    return this.currentRoll;
-  }
-  else {
-    this.addRunningTotal();
-    return this.currentRoll;
-  };
+  // this.currentRoll = Math.floor(Math.random() * 6 + 1);
+  // console.log("The current roll:", this.currentRoll);
+  // if (this.currentRoll === 1) {
+  //   console.log("You rolled a 1!")
+  //   this.runningTotal = 0;
+  //   console.log("Running total is", this.runningTotal)
+  //   currentPlayer = switchPlayer(currentPlayer);
+  //   console.log("The current player is: ", currentPlayer);
+  //   return this.currentRoll;
+  // }
+  // else {
+  //   this.addRunningTotal();
+  //   return this.currentRoll;
+  // };
 };
