@@ -1,4 +1,4 @@
-export function Player (name) {
+export default function Player (name) {
   this.currentRoll = 0;
   this.runningTotal = 0;
   this.totalScore = 0;
