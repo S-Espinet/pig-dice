@@ -12,4 +12,11 @@ describe ('Player', () => {
     expect(playerOne.currentRoll).toBeLessThanOrEqual(6);
     expect(playerOne.currentRoll).toBeGreaterThan(0);
   });
+  //already passes - needs good fail
+  test('should return running total based on dice roll', () => {
+    const playerOne = new Player("playerOne");
+    playerOne.rollDice();
+    playerOne.addRunningTotal();
+    expect(playerOne.runningTotal).toBeLessThanOrEqual(6);
+  });
 });

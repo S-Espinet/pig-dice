@@ -19,8 +19,8 @@ export function switchPlayer(currentPlayer) {
 }
 
 Player.prototype.addRunningTotal = function() {
-  this.runningTotal += this.currentRoll;
-  return this.runningTotal;
+  //this.runningTotal += this.currentRoll;
+  //return this.runningTotal;
 };
 
 Player.prototype.addTotalScore = function() {
